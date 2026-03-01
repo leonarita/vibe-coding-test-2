@@ -22,7 +22,7 @@ pip install -r requirements.txt
 5. Clique em **Criar credenciais > Chave de API**.
 6. (Recomendado) Restrinja a chave por API e por origem/uso.
 
-## Como executar
+## Como executar (CLI)
 
 Você pode passar a chave via argumento ou variável de ambiente.
 
@@ -43,7 +43,23 @@ Com seed opcional (resultado reproduzível):
 python -m app.main --url "<URL_DO_VIDEO>" --winners 3 --seed 42
 ```
 
-## Exemplo de saída
+## Como executar (telinha web)
+
+Suba a interface web simples:
+
+```bash
+python -m app.web
+```
+
+Depois acesse no navegador:
+
+```text
+http://localhost:8000
+```
+
+Na tela, informe URL do vídeo, quantidade de vencedores e clique em **Sortear**.
+
+## Exemplo de saída (CLI)
 
 ```text
 === Resultado do sorteio ===

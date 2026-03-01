@@ -5,8 +5,6 @@ from __future__ import annotations
 import argparse
 import os
 
-from dotenv import load_dotenv
-
 from app.draw import draw_winners, unique_participants
 from app.youtube_comments import (
     CommentsDisabledError,
@@ -45,7 +43,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
-    load_dotenv()
     args = parse_args()
 
     api_key = args.api_key or os.getenv("YOUTUBE_API_KEY")
